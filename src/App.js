@@ -54,7 +54,7 @@ class App extends Component {
   render() {
 
     const style = {
-      backgoundColor: 'green',
+      backgroundColor: 'green',
       color: 'white',
       font: 'inherit',
       border: '1px solid blue',
@@ -78,7 +78,7 @@ class App extends Component {
            
           </div>
       );
-      style.backgoundColor = 'red';
+      style.backgroundColor = 'red';
     }
    
     return (
@@ -87,7 +87,10 @@ class App extends Component {
         <p> This is working </p>
         <button 
           style = { style }
-          onClick = { this.togglePersonHandler }>Toggle Persons</button> 
+          onClick = { this.togglePersonHandler }
+          overrides={{backgroundColor: "00FF00"}}
+
+>Toggle Persons</button> 
           { persons }
       </div>
     );
